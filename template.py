@@ -20,13 +20,14 @@ list_of_files = [
     "dvc.yaml",
     "params.yaml",
     "init_setup.sh",
-    "requirements.txt"
+    "requirements.txt",
     "requirements_dev.txt",
     "setup.py",
     "setup.cfg",
     "pyproject.toml",
     "tox.ini",
-    "research/trials.ipynb"
+    "research/trials.ipynb",
+    "example.py"
 ]
 
 for filepath in list_of_files:
