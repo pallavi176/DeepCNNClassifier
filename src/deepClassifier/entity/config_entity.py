@@ -1,9 +1,11 @@
-from collections import namedtuple
+from dataclasses import dataclass
+from pathlib import Path
 
-DataIngestionConfig = namedtuple("DataIngestionConfig", [
-    "root_dir",
-    "source_URL",
-    "local_data_file",
-    "unzip_dir"
-])
+
+@dataclass(frozen=True)
+class DataIngestionConfig:
+    root_dir: Path
+    source_URL: str
+    local_data_file: Path
+    unzip_dir: Path
 
