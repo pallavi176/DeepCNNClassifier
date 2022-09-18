@@ -1,7 +1,6 @@
 tensorflow
 dvc
 pandas
-notebook
 numpy
 matplotlib
 seaborn
@@ -11,6 +10,7 @@ types-PyYAML
 tqdm
 ensure==1.0.2
 joblib
+scipy
 
 -e .
 
