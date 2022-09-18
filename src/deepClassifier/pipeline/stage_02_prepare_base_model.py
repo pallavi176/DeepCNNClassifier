@@ -2,7 +2,7 @@ from deepClassifier.config import ConfigurationManager
 from deepClassifier.components import PrepareBaseModel
 from deepClassifier import logger
 
-STAGE_NAME = "Prepare Base Model stage"
+STAGE_NAME = "Prepare base model"
 
 def main():
     config = ConfigurationManager()
@@ -13,6 +13,7 @@ def main():
 
 if __name__ == '__main__':
     try:
+        logger.info(f"*******************")
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         main()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")

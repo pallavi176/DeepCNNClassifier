@@ -1,9 +1,6 @@
-import os
-import urllib.request as request
 from pathlib import Path
-from zipfile import ZipFile
-import tensorflow as tf
 from deepClassifier.entity import PrepareBaseModelConfig
+import tensorflow as tf
 
 class PrepareBaseModel:
     def __init__(self, config: PrepareBaseModelConfig):
