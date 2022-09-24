@@ -21,7 +21,6 @@ stages:
     outs:
       - artifacts/prepare_base_model
 
-
   training:
     cmd: python src/deepClassifier/pipeline/stage_03_training.py
     deps:
