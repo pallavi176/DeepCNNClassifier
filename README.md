@@ -15,5 +15,7 @@ DeepCNNClassifier
 10. Update the dvc.yaml
 11. run "dvc repro" for running all the stages in pipeline
 
-![img](https://raw.githubusercontent.com/c17hawke/FSDS_NOV_deepCNNClassifier/main/docs/images/Data%20Ingestion%402x%20(1).png)
+![img](https://raw.githubusercontent.com/pallavi176/DeepCNNClassifier/main/docs/images/Data%20Ingestion%402x%20(1).png)
 
+#mlflow tutorials:
+https://mlflow.org/docs/latest/tutorials-and-examples/tutorial.html
