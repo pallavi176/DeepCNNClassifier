@@ -135,5 +135,5 @@ dmypy.json
 *.zip
 
 artifacts/
-
+research/mlflow_dir/
 
