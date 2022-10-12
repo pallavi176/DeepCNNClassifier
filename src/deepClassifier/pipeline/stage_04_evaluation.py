@@ -4,6 +4,7 @@ from deepClassifier import logger
 
 STAGE_NAME = "Evaluation stage"
 
+
 def main():
     config = ConfigurationManager()
     val_config = config.get_validation_config()
@@ -11,7 +12,8 @@ def main():
     evaluation.evaluation()
     evaluation.save_score()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     try:
         logger.info(f"*******************")
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")

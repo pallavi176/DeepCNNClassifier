@@ -5,8 +5,7 @@ from deepClassifier.config.configuration import ConfigurationManager
 from deepClassifier.components.data_ingestion import DataIngestion
 
 
-class Pipeline():
-    
+class Pipeline:
     def __init__(self, config: ConfigurationManager = ConfigurationManager()) -> None:
         try:
             self.config = config
