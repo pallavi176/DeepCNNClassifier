@@ -140,3 +140,5 @@ artifacts/
 mlruns/*
 research/mlflow_dir/mlruns/*
 prediction_service/model.h5
+
+secrets.yaml
