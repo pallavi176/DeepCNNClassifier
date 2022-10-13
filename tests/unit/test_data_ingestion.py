@@ -1,8 +1,9 @@
+import os
 import pytest
+from pathlib import Path
 from deepClassifier.entity import DataIngestionConfig
 from deepClassifier.components import DataIngestion
-from pathlib import Path
-import os
+
 
 class Test_DataIngestion_download:
     data_ingestion_config = DataIngestionConfig(
