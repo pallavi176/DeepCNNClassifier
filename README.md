@@ -42,4 +42,3 @@ STEP 4: Use context manager of mlflow to start run and then log metrics, params 
 
 ## Sample data for testing-
 https://raw.githubusercontent.com/pallavi176/raw_data/main/sample_data.zip
-
