@@ -7,10 +7,10 @@ from deepClassifier.components import DataIngestion
 
 class Test_DataIngestion_download:
     data_ingestion_config = DataIngestionConfig(
-        root_dir="tests/data/", 
+        root_dir="tests/data/data_ingestion/", 
         source_URL="https://raw.githubusercontent.com/pallavi176/raw_data/main/sample_data.zip", 
-        local_data_file="tests/data/data.zip", 
-        unzip_dir="tests/data/")
+        local_data_file="tests/data/data_ingestion/data.zip", 
+        unzip_dir="tests/data/data_ingestion/")
 
     def test_download(self):
         data_ingestion = DataIngestion(config=self.data_ingestion_config)
@@ -20,16 +20,16 @@ class Test_DataIngestion_download:
 
 class Test_DataIngestion_unzip:
     data_ingestion_config = DataIngestionConfig(
-        root_dir="tests/data/", 
+        root_dir="tests/data/data_ingestion/", 
         source_URL="", 
-        local_data_file="tests/data/sample_data.zip", 
-        unzip_dir="tests/data/")
+        local_data_file="tests/data/data_ingestion/sample_data.zip", 
+        unzip_dir="tests/data/data_ingestion/")
 
     def test_unzip(self):
         data_ingestion = DataIngestion(config=self.data_ingestion_config)
         data_ingestion.unzip_and_clean()
-        assert os.path.isdir(Path("tests/data/PetImages"))
-        assert os.path.isdir(Path("tests/data/PetImages/Cat"))
-        assert os.path.isdir(Path("tests/data/PetImages/Dog"))
+        assert os.path.isdir(Path("tests/data/data_ingestion/PetImages"))
+        assert os.path.isdir(Path("tests/data/data_ingestion/PetImages/Cat"))
+        assert os.path.isdir(Path("tests/data/data_ingestion/PetImages/Dog"))
 
         
