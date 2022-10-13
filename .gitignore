@@ -135,5 +135,8 @@ dmypy.json
 *.zip
 
 artifacts/
-research/mlflow_dir/
+# research/mlflow_dir/
 
+mlruns/*
+research/mlflow_dir/mlruns/*
+prediction_service/model.h5
