@@ -145,3 +145,6 @@ secrets.yaml
 
 tests/data/data_ingestion
 tests/data/prepare_base_model
+tests/data/prepare_callbacks
+tests/data/prepare_training
+
