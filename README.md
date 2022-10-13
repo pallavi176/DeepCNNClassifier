@@ -19,3 +19,27 @@ DeepCNNClassifier
 
 #mlflow tutorials:
 https://mlflow.org/docs/latest/tutorials-and-examples/tutorial.html
+
+mlflow server command -
+
+mlflow server \
+--backend-store-uri sqlite:///mlflow.db \
+--default-artifact-root ./artifacts \
+--host 0.0.0.0 -p 1234
+
+STEP 1: Set the env variable | Get it from dagshub -> remote tab -> mlflow tab
+
+MLFLOW_TRACKING_URI=https://dagshub.com/pallavi176/DeepCNNClassifier.mlflow \
+MLFLOW_TRACKING_USERNAME=pallavi176 \
+MLFLOW_TRACKING_PASSWORD=<> \
+
+STEP 2: install mlflow
+
+STEP 3: Set remote URI
+
+STEP 4: Use context manager of mlflow to start run and then log metrics, params and model
+
+
+## Sample data for testing-
+https://raw.githubusercontent.com/pallavi176/raw_data/main/sample_data.zip
+
