@@ -1,6 +1,5 @@
 import os
 import pytest
-import tensorflow as tf
 from pathlib import Path
 from deepClassifier.entity import PrepareCallbacksConfig
 from deepClassifier.components import PrepareCallback
