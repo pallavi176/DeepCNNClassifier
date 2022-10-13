@@ -142,3 +142,6 @@ research/mlflow_dir/mlruns/*
 prediction_service/model.h5
 
 secrets.yaml
+
+tests/data/data_ingestion
+tests/data/prepare_base_model
