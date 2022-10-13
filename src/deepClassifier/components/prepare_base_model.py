@@ -15,6 +15,7 @@ class PrepareBaseModel:
         )
 
         self.save_model(path=self.config.base_model_path, model=self.model)
+        return self.model
 
     @staticmethod
     def _prepare_full_model(model, classes, freeze_all, freeze_till, learning_rate):
@@ -41,9 +42,9 @@ class PrepareBaseModel:
         full_model.summary()
         return full_model
 
-    def update_base_model(self):
+    def update_base_model(self, model):
         self.full_model = self._prepare_full_model(
-            model=self.model,
+            model=model,
             classes=self.config.params_classes,
             freeze_all=True,
             freeze_till=None,
