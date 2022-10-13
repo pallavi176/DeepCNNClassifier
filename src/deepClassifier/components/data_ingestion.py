@@ -53,3 +53,9 @@ class DataIngestion:
         logger.info(
             f"unzipping file and removing unawanted files step completed successfully"
         )
+
+    def create_test_data(self):
+        """
+        separte 30% of data into test data
+        """
+        pass
