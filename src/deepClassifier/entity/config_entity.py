@@ -47,3 +47,4 @@ class EvaluationConfig:
     training_data: Path
     params_image_size: list
     params_batch_size: int
+    score_json_path: Path

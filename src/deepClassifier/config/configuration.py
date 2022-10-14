@@ -92,5 +92,6 @@ class ConfigurationManager:
             training_data=self.config.data_ingestion.unzip_dir,
             params_image_size=self.params.IMAGE_SIZE,
             params_batch_size=self.params.BATCH_SIZE,
+            score_json_path=self.config.evaluation.score_json_path,
         )
         return eval_config
