@@ -42,3 +42,20 @@ STEP 4: Use context manager of mlflow to start run and then log metrics, params 
 
 ## Sample data for testing-
 https://raw.githubusercontent.com/pallavi176/raw_data/main/sample_data.zip
+
+Steps for testing:
+
+Step1: Create below folders:
+tests/data/data_ingestion
+tests/data/prepare_base_model
+tests/data/prepare_callbacks
+tests/data/training
+tests/data/evaluate
+
+Step 2: Download sample data from path: https://raw.githubusercontent.com/pallavi176/raw_data/main/sample_data.zip
+& copy to folder: tests/data/data_ingestion
+
+Step 3: Execute the below command to run test cases:
+
+pytest -v
+
