@@ -6,22 +6,6 @@ from deepClassifier.entity import PrepareCallbacksConfig, TrainingConfig
 from deepClassifier.components import PrepareCallback, Training
 from deepClassifier.utils import get_size
 
-class Test_Training_get_base_model:
-    training_config = TrainingConfig(
-            root_dir=Path('tests/data/training/'),
-            trained_model_path=Path('tests/data/training/model.h5'),
-            updated_base_model_path=Path('tests/data/prepare_base_model/base_model_updated.h5'),
-            training_data='',
-            params_epochs='',
-            params_batch_size='',
-            params_is_augmentation='',
-            params_image_size=''
-        )
-
-    def test_get_base_model(self):
-        training = Training(config=self.training_config)
-        training.get_base_model()
-        assert os.path.exists(self.training_config.updated_base_model_path)
         
 class Test_Training_train:
     prepare_callbacks_config = PrepareCallbacksConfig (
@@ -39,6 +23,17 @@ class Test_Training_train:
             params_is_augmentation=True,
             params_image_size=[224, 224, 3]
         )
+
+    def test_get_tb_ckpt_callbacks(self):
+        prepare_callbacks = PrepareCallback(config=self.prepare_callbacks_config)
+        callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+        assert isinstance(callback_list, list)
+        assert len(callback_list) == 2
+
+    def test_get_base_model(self):
+        training = Training(config=self.training_config)
+        training.get_base_model()
+        assert os.path.exists(self.training_config.updated_base_model_path)
 
     def test_train(self):
         prepare_callbacks = PrepareCallback(config=self.prepare_callbacks_config)
